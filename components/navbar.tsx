@@ -19,7 +19,7 @@ const components: { title: string; href: string; description: string }[] = [
     title: "All Locations",
     href: "/cashone/all-locations",
     description:
-      "2170 Wilma Rudolph Boulevard, Clarksville, Tennessee 37040, United States",
+      "At Cash 1, we provide the financial assistance that you need when money is a little tight. For 21 years, Cash 1 has provided excellent customer service as well as professional, honest services. Our loans have helped a multitude of clients make crucial payments and stay out of debt.",
   },
   {
     title: "Clarksville",
@@ -59,6 +59,40 @@ const components: { title: string; href: string; description: string }[] = [
   },
   
 ]
+const advancedcash: { title: string; href: string; description: string }[] = [
+  {
+    title: "All Locations",
+    href: "/cashone/all-locations",
+    description:
+      "At Cash Advance, we provide the financial assistance that you need when money is a little tight. For 21 years, Cash Advance has provided excellent customer service as well as professional, honest services. Our loans have helped a multitude of clients make crucial payments and stay out of debt.",
+  },
+  {
+    title: "Nashville",
+    href: "/advance-cash/nasville",
+    description:
+      "4811 Nolensville Pike, Nashville, Tennessee 37211, United States",
+  },
+  {
+    title: "Cookeville",
+    href: "/advance-cash/cookeville",
+    description:
+      "740 South Willow Avenue, Cookeville, Tennessee 38501, United States",
+  },
+  {
+    title: "Lebanon",
+    href: "/advance-cash/lebanon",
+    description:
+      "502 West Main Street, Lebanon, Tennessee 37087, United States",
+  },
+  {
+    title: "KingsPort",
+    href: "/advance-cash/kingsport",
+    description:
+      "1440 East Stone Drive, Kingsport, Tennessee 37660, United States",
+  },
+
+  
+]
  
 
 export default function Navbar() {
@@ -76,7 +110,7 @@ export default function Navbar() {
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <ListItem href="/docs" title="All Locations">
-                Transfer, sync, and manage your favorites
+              At Cash City, we provide the financial assistance that you need when money is a little tight. For 21 years, Cash City has provided excellent customer service as well as professional, honest services. Our loans have helped a multitude of clients make crucial payments and stay out of debt.
               </ListItem>
               <ListItem href="/docs" title="Ashland City">
               327 Frey Street, Ashland City, Tennessee 37015, United States
@@ -125,22 +159,34 @@ export default function Navbar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/discord" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Join our Discord
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuTrigger>Advance Cash</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {advancedcash.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
           </nav>
           <Link href={'/login'}>
-         <Button className="w-[6rem]" variant={'default'}>
+         <Button className="w-[9rem]" variant={'default'}>
           
-            Login
+            Customer Portal
           </Button>
           </Link>
+          <div className="ml-2 ">
           <ModeToggle/>
+          </div>
+          
         </div>
   )
 }
