@@ -131,16 +131,7 @@ const Lebanon = () => {
           {/* Reviews */}
           <div className="mt-8">
             <h2 className="text-2xl font-semibold mb-4">Customer Reviews</h2>
-            {reviews.map((reviewData, index) => (
-              <ReviewCard
-                key={index}
-                avatarUrl={reviewData.profile_photo_url}
-                name={reviewData.author_name}
-                review={reviewData.text}
-                date={reviewData.relative_time_description}
-                stars={reviewData.rating}
-              />
-            ))}
+
           </div>
         </div>
       </div>
