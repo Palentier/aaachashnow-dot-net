@@ -97,7 +97,7 @@ const advancedcash: { title: string; href: string; description: string }[] = [
 
 export default function Navbar() {
   return(
-   
+   <>
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a className="flex title-font font-medium items-center text-primary-foreground mb-4 md:mb-0">
             <span className="ml-3 text-xl text-primary">AAA Cash Now</span>
@@ -109,11 +109,7 @@ export default function Navbar() {
           <NavigationMenuTrigger>Cash City</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-<<<<<<< HEAD
               <ListItem href="/cash-city/all-locations" title="All Locations">
-=======
-              <ListItem href="/docs" title="All Locations">
->>>>>>> 94e83cd56a7c2fac1b6eb7d40a26ddf9611bb79a
               At Cash City, we provide the financial assistance that you need when money is a little tight. For 21 years, Cash City has provided excellent customer service as well as professional, honest services. Our loans have helped a multitude of clients make crucial payments and stay out of debt.
               </ListItem>
               <ListItem href="/cash-city/ashland" title="Ashland City">
@@ -192,6 +188,7 @@ export default function Navbar() {
           </div>
           
         </div>
+  </>
   )
 }
 
