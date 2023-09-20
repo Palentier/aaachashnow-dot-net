@@ -38,7 +38,7 @@ const LocationCard = ({ title, description, imageSrc }: {
         </CardDescription>
       </CardContent>
       <CardFooter>
-        <Button variant={'default'} href="/locations">
+        <Button variant={'default'} >
           Learn More
         </Button>
       </CardFooter>
