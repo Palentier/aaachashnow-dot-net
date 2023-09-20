@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
+import Aboutus from './aboutus';
+import Locations from './locations';
 
 export default function Hero() {
   return (
@@ -10,7 +12,7 @@ export default function Hero() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="w-full lg:w-1/2 lg:text-left mb-8 lg:mb-0 order-2 lg:order-1">
-              <h1 className="text-6xl text-primary font-black">
+              <h1 className="text-5xl md:text-7xl text-primary font-black">
                 <motion.span
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -119,8 +121,11 @@ export default function Hero() {
                 />
               </div>
           </div>
+         
         </div>
       </div>
+        <Aboutus/>
+        <Locations/>
     </div>
   );
 }

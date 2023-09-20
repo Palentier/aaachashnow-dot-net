@@ -19,7 +19,7 @@ const components: { title: string; href: string; description: string }[] = [
     title: "All Locations",
     href: "/cashone/all-locations",
     description:
-      "2170 Wilma Rudolph Boulevard, Clarksville, Tennessee 37040, United States",
+      "At Cash 1, we provide the financial assistance that you need when money is a little tight. For 21 years, Cash 1 has provided excellent customer service as well as professional, honest services. Our loans have helped a multitude of clients make crucial payments and stay out of debt.",
   },
   {
     title: "Clarksville",
@@ -59,6 +59,40 @@ const components: { title: string; href: string; description: string }[] = [
   },
   
 ]
+const advancedcash: { title: string; href: string; description: string }[] = [
+  {
+    title: "All Locations",
+    href: "/cashone/all-locations",
+    description:
+      "At Cash Advance, we provide the financial assistance that you need when money is a little tight. For 21 years, Cash Advance has provided excellent customer service as well as professional, honest services. Our loans have helped a multitude of clients make crucial payments and stay out of debt.",
+  },
+  {
+    title: "Nashville",
+    href: "/advance-cash/nasville",
+    description:
+      "4811 Nolensville Pike, Nashville, Tennessee 37211, United States",
+  },
+  {
+    title: "Cookeville",
+    href: "/advance-cash/cookeville",
+    description:
+      "740 South Willow Avenue, Cookeville, Tennessee 38501, United States",
+  },
+  {
+    title: "Lebanon",
+    href: "/advance-cash/lebanon",
+    description:
+      "502 West Main Street, Lebanon, Tennessee 37087, United States",
+  },
+  {
+    title: "KingsPort",
+    href: "/advance-cash/kingsport",
+    description:
+      "1440 East Stone Drive, Kingsport, Tennessee 37660, United States",
+  },
+
+  
+]
  
 
 export default function Navbar() {
@@ -75,34 +109,34 @@ export default function Navbar() {
           <NavigationMenuTrigger>Cash City</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <ListItem href="/docs" title="All Locations">
-                Transfer, sync, and manage your favorites
+              <ListItem href="/cash-city/all-locations" title="All Locations">
+              At Cash City, we provide the financial assistance that you need when money is a little tight. For 21 years, Cash City has provided excellent customer service as well as professional, honest services. Our loans have helped a multitude of clients make crucial payments and stay out of debt.
               </ListItem>
-              <ListItem href="/docs" title="Ashland City">
+              <ListItem href="/cash-city/ashland" title="Ashland City">
               327 Frey Street, Ashland City, Tennessee 37015, United States
               </ListItem>
-              <ListItem href="/docs" title="Clarksville">
+              <ListItem href="/cash-city/madison" title="Clarksville">
               1987 Madison Street, Clarksville, Tennessee 37043, United States
               </ListItem>
-              <ListItem href="/docs" title="Columbia">
+              <ListItem href="/cash-city/columbia" title="Columbia">
               1600 Carmack Boulevard, Columbia, Tennessee 38401, United States
               </ListItem>
-              <ListItem href="/docs/trasnferring" title="Dickson">
+              <ListItem href="/cash-city/dickson" title="Dickson">
               1640 Highway 46 S, Dickson, Tennessee 37055, United States
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Franklin">
+              <ListItem href="/cash-city/franklin" title="Franklin">
               595 Hillsboro Rd, Franklin, Tennessee 37064, United States
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Hohenwald">
+              <ListItem href="/cash-city/hohenwald" title="Hohenwald">
               554 East Main Street, Hohenwald, Tennessee 38462, United States
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Lebanon">
+              <ListItem href="/cash-city/lebanon" title="Lebanon">
               214 West Main Street, Lebanon, Tennessee 37087, United States
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Murfresboro">
+              <ListItem href="/cash-city/murfreesoboro" title="Murfresboro">
               1155 Northwest Broad Street, Murfreesboro, Tennessee 37129, United States
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Madison">
+              <ListItem href="/cash-city/madison" title="Madison">
               214 Gallatin Pike, Madison, Tennessee 37115, United States
               </ListItem>
             </ul>
@@ -125,22 +159,34 @@ export default function Navbar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/discord" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Join our Discord
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuTrigger>Advance Cash</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {advancedcash.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
           </nav>
           <Link href={'/login'}>
-         <Button className="w-[6rem]" variant={'default'}>
+         <Button className="w-[9rem]" variant={'default'}>
           
-            Login
+            Customer Portal
           </Button>
           </Link>
+          <div className="ml-2 ">
           <ModeToggle/>
+          </div>
+          
         </div>
   )
 }
